@@ -7,6 +7,13 @@
         <p>bu yaptiklarim gelecekte basit gelecek olsa da ilk adimlar her zaman iyidir</p>
         <em>cok onemli</em>
         <strong>coook onemli</strong>
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
         <p>Merhaba!</p>
         <p>Çalışıyor!</p>
     </body>
